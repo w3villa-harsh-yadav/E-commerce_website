@@ -1,0 +1,35 @@
+{
+    "buy":[
+        {
+            "id":1,
+            "class_type":"fashion",
+            "item_image":"https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+            "text":"Fashion"
+        },
+        {
+            "id":2,
+            "class_type":"bags",
+            "item_image":"https://images.unsplash.com/photo-1597633125184-9fd7e54f0ff7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8QkFHU3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "text":"Bags"
+        },
+        {
+            "id":3,
+            "class_type":"health",
+            "item_image":"https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8SGVhbHRoJTIwYW5kJTIwYmVhdXR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "text":"Health & Beauty"
+        },
+        {
+            "id":4,
+            "class_type":"footwear",
+            "item_image":"https://images.unsplash.com/photo-1620794341491-76be6eeb6946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fEZvb3R3ZWFyJTIwR0lGfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "text":"Footwear"
+        },
+        {
+            "id":5,
+            "class_type":"home",
+            "item_image":"https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+            "text":"Home Decoration"
+        }
+
+    ]
+}
