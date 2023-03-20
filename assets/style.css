@@ -292,7 +292,86 @@ a{
         display: none;
     }
 }
-/* Hero Section classes */
+
+/* +++++++++++++ Search-section ++++++++++++++++ */
+.search-section .search-block{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.search-section .search-block .item-image{
+    width: 20vw;
+    height: 50vh;
+}
+.search-section .search-block .item .item-image img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+}
+.search-section .search-block .item{
+    box-shadow: 0px 0px 12px 3px lightgrey;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.search-section .search-block .item-details{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 5px 17px;
+}
+.search-section .search-block .item-hero{
+    text-align: start;
+}
+.search-section .search-block .item-hero .row-1{
+    padding-left: 15px;
+}
+.search-section .search-block .item-hero input{
+    width: 3rem;
+    padding-left: 5px;
+    height: 29px;
+}
+.search-section .search-block .item-hero input:focus{
+    outline: none;
+}
+.search-section .search-block .item-hero button{
+    background-color: var(--background-color);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.search-section .search-block .item-hero .row-2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.search-section .search-block .item-hero .row-2 .input-btn{
+    padding-left: 11px;
+}
+.search-section .search-block .item-hero .icons .heart{
+    padding-right: 20px;
+}
+.search-section .search-block .item-hero .icons i{
+    font-size: 30px;
+}
+
+/* For input tag in item part */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+/* End */
+
+.search-section .search-block .item-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 5px 17px;
+}
+
+/* +++++++++++++ Hero Section classes ++++++++++ */
 .hero .content{
     display: flex;
     /* justify-content: space-between; */

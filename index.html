@@ -131,9 +131,9 @@
               <p>All &nbsp<i class="fa-solid fa-caret-down"></i></p>
             </div>
             <div class="input">
-              <input type="text" placeholder="Search Here" />
+              <input id="search-icon" type="text" placeholder="Search Here" onchange="search()" onkeypress="search()"  />
             </div>
-            <div class="button">
+            <div class="button" onclick="search()">
               <p><i class="fa-regular fa-magnifying-glass"></i></p>
             </div>
           </div>
@@ -203,8 +203,16 @@
       </div>
     </div>
 
+    <!-- Search Section -->
+    <div class="search-section" id="search-section">
+      <div class="container">
+        <div id="search-block" class="search-block ptb">      
+        </div>
+      </div>
+    </div>
+
     <!-- Hero Section -->
-    <div class="hero ptb">
+    <div id="hero" class="hero ptb">
       <div class="container">
         <div class="content">
           <div class="cont-1">
@@ -244,7 +252,7 @@
     </div>
 
     <!-- Grey Section -->
-    <div class="grey-section ptb">
+    <div id="grey" class="grey-section ptb">
       <div class="container">
         <div class="grey-content ptbs">
           <div class="ship d-flex">
@@ -331,7 +339,7 @@
     </div>
 
     <!-- Why buy from us -->
-    <div class="why-section ptb">
+    <div id="why" class="why-section ptb">
       <div class="container">
         <div class="why-content">
           <div class="heading">
@@ -367,7 +375,7 @@
     </div>
 
     <!-- Featured Section -->
-    <div class="featured-section ptb">
+    <div id="featured1" class="featured-section ptb">
       <div class="container">
         <div class="feature-content">
           <div class="heading">
@@ -410,7 +418,7 @@
     </div>
 
     <!-- Featured-2 Section -->
-    <div class="featured-2-section ptb">
+    <div id="featured2" class="featured-2-section ptb">
       <div class="container">
         <div class="feature-content">
           <div class="heading">
@@ -459,7 +467,7 @@
     </div>
 
     <!-- Shop Section -->
-    <div class="shop-section ptb">
+    <div id="shop" class="shop-section ptb">
       <div class="container">
         <div class="shop-content">
           <div class="heading">
@@ -500,7 +508,7 @@
     </div>
 
     <!-- Galery Section -->
-    <div class="gallery-section ptb">
+    <div id="gallery" class="gallery-section ptb">
       <div class="container">
         <div class="gallery-content ptbs">
           <div class="heading">
@@ -552,7 +560,7 @@
     </div>
 
     <!-- From Our Blog Section -->
-    <div class="our-blog">
+    <div id="blog" class="our-blog">
       <div class="container">
         <div class="blog-content ptb">
           <div class="heading">
@@ -578,7 +586,7 @@
     </div>
 
     <!-- People saying Section -->
-    <div class="people-saying">
+    <div id="people" class="people-saying">
       <div class="container">
         <div class="main-container">
           <h1>What are people saying about us</h1>
@@ -675,7 +683,7 @@
     </div>
 
     <!-- Most Viewed Section -->
-    <div class="most-viewed">
+    <div id="viewed" class="most-viewed">
       <div class="container">
         <div class="most-viewed-section">
           <h1>MOST VIEWED</h1>
@@ -756,7 +764,7 @@
     <!-- Footer Section -->
     <footer>
       <div class="footer-body">
-        <div class="footer-top">
+        <div id="footer-top" class="footer-top">
           <div class="container">
             <div><i class="fa-brands fa-facebook-f"></i></div>
             <div><i class="fa-brands fa-linkedin-in"></i></div>
@@ -842,6 +850,7 @@
 
     <!-- Custom JavaScript -->
     <script src="./assets/javascript/script.js"></script>
+    <script src="./assets/javascript/search.js"></script>
 
     <script>
       function ActiveClass(element) {

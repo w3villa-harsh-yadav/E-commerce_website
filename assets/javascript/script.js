@@ -42,8 +42,9 @@ const categories_data = async () => {
   const response = await fetch("./assets/data/items.json");
   let data = await response.json();
   let html = "";
-  data.categories.forEach((element) => {
-    html += `
+  data.items.forEach((element) => {
+    if(element.type=="categories"){
+      html += `
         <div class="item i-1">
         <div class="image">
         <img
@@ -69,6 +70,7 @@ const categories_data = async () => {
         </div>
     </div>
   `;
+    }
   });
   document.getElementById("items").innerHTML = html;
 };
@@ -78,7 +80,8 @@ const products_data = async()=>{
     const response = await fetch("./assets/data/items.json");
     const data = await response.json();
     let html = "";
-    data.products.forEach((element)=>{
+    data.items.forEach((element)=>{
+      if(element.type=="products"){
         html+= `
         <div class="${element.item_class} item">
         <div class="item-image">
@@ -123,6 +126,7 @@ const products_data = async()=>{
         </div>
       </div>
         `;
+      }
     });
 
     document.getElementById("items-block").innerHTML = html;
