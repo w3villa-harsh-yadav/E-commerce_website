@@ -39,7 +39,8 @@ a{
     text-decoration: none;
     color: black;
 }
-/* .active::before{
+.why-section .active::before,
+.featured-section .active::before{
     content: "";
     position: absolute;
     border: 12px solid transparent;
@@ -47,13 +48,16 @@ a{
     top:43px;
     left: 40%;
 }
-.active{
+.why-section .active,
+.featured-section .active{
     position: relative;
     background-color: var(--background-color);
 }
-.active p{
+.why-section .active p,
+.featured-section .active p{
     color: #fff !important;
-} */
+}
+
 /* ++++++++++ common nav-bar classes +++++++++ */
 
 .header{
