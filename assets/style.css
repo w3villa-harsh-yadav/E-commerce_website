@@ -39,7 +39,21 @@ a{
     text-decoration: none;
     color: black;
 }
-
+.active::before{
+    content: "";
+    position: absolute;
+    border: 12px solid transparent;
+    border-top-color: var(--background-color);
+    top:43px;
+    left: 40%;
+}
+.active{
+    position: relative;
+    background-color: var(--background-color);
+}
+.active p{
+    color: #fff !important;
+}
 /* ++++++++++ common nav-bar classes +++++++++ */
 
 .header{
@@ -684,33 +698,19 @@ input[type=number]::-webkit-outer-spin-button {
 .why-section .why-content .categories div:first-child{
     border: none;
 }
-.why-section .why-content .categories div:first-child::before{
-    content: "";
-    position: absolute;
-    border: 12px solid transparent;
-    border-top-color: var(--background-color);
-    top:43px;
-    left: 70px;
-}
-.why-section .why-content .categories a{
+.why-section .why-content .categories p{
     text-decoration: none;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
     color: rgb(71, 71, 71);
 }
-.why-section .why-content .categories .active{
+/* .why-section .why-content .categories div:hover{
     background-color: var(--background-color);
 }
-.why-section .why-content .categories .active a{
+.why-section .why-content .categories div:hover p{
     color: #fff;
-}
-.why-section .why-content .categories div:hover{
-    background-color: var(--background-color);
-}
-.why-section .why-content .categories div:hover a{
-    color: #fff;
-}
+} */
 
 .why-section .why-content .image-block{
     display: flex;
@@ -819,35 +819,15 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 10px 10px;
     border-left: 1px solid rgb(196, 196, 196);
 }
-.featured-section .feature-content .categories div:before{
-    content: "";
-    position: absolute;
-    border: 12px solid transparent;    
-    border-top-color: rgb(46 43 222);
-    top: 42px;
-    left: 40px;
-}
 .featured-section .feature-content .categories div:first-child{
     border: none;
 }
-.featured-section .feature-content .categories a{
+.featured-section .feature-content .categories p{
     text-decoration: none;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
     color: rgb(71, 71, 71);
-}
-.featured-section .feature-content .categories .active{
-    background-color: var(--background-color);
-}
-.featured-section .feature-content .categories .active a{
-    color: #fff;
-}
-.featured-section .feature-content .categories div:hover{
-    background-color: var(--background-color);
-}
-.featured-section .feature-content .categories div:hover a{
-    color: #fff;
 }
 .featured-section .feature-content .items-block{
     display: flex;

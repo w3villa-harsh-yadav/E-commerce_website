@@ -359,17 +359,17 @@
             <p>is the best Opencart theme framework on the market today.</p>
           </div>
           <div class="categories">
-            <div class="top active">
-              <a href="#">Top Categories</a>
+            <div class="top active" onclick="ActiveClass(this)">
+              <p>Top Categories</p>
             </div>
-            <div class="electronics">
-              <a href="#">Electronics</a>
+            <div class="electronics" onclick="ActiveClass(this)">
+              <p>Electronics</p>
             </div>
-            <div class="Beauty">
-              <a href="#">Beauty</a>
+            <div class="Beauty" onclick="ActiveClass(this)">
+              <p>Beauty</p>
             </div>
-            <div class="Fashion">
-              <a href="#">Fashion</a>
+            <div class="Fashion" onclick="ActiveClass(this)">
+              <p>Fashion</p>
             </div>
           </div>
           <div id="image-block" class="image-block ptb">
@@ -399,17 +399,17 @@
             </p>
           </div>
           <div class="categories">
-            <div id="featured" class="featured active">
-              <a href="#">Featured</a>
+            <div id="featured" class="featured active" onclick="ActiveClass(this)">
+              <p>Featured</p>
             </div>
-            <div id="latest" class="latest">
-            <a href="#">Latest</a>
+            <div id="latest" class="latest" onclick="ActiveClass(this)">
+            <p>Latest</p>
             </div>
-            <div id="bestsellers" class="bestsellers">
-              <a href="#">bestsellers</a>
+            <div id="bestsellers" class="bestsellers" onclick="ActiveClass(this)">
+              <p>bestsellers</p>
             </div>
-            <div id="specials" class="specials">
-              <a href="#">Specials</a>
+            <div id="specials" class="specials" onclick="ActiveClass(this)">
+              <p>Specials</p>
             </div>
           </div>
           <div id="items-block" class="items-block ptb">
@@ -859,7 +859,10 @@
 
     <script>
       function ActiveClass(element) {
-        element.classList.add("active");
+        for(const child of element.parentNode.children){
+          child.classList.remove("active")
+        }
+        element.classList.add("active")
       }
     </script>
 
