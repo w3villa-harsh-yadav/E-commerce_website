@@ -80,7 +80,7 @@ function load(){
     Object.keys(localStorage).forEach((key) => {
       const user = JSON.parse(localStorage.getItem(key));
       if(user.islogin == true){
-        // window.location.assign("index.html");
+        window.location.assign("index.html");
       }
     });
 }
