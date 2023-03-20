@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
 
-  <body>
+  <body onload="logged()">
     <!-- Header-classes -->
     <div id="header" class="header">
       <div class="container">
@@ -131,20 +131,24 @@
               <p>All &nbsp<i class="fa-solid fa-caret-down"></i></p>
             </div>
             <div class="input">
-              <input id="search-icon" type="text" placeholder="Search Here" onchange="search()" onkeypress="search()"  />
+              <input id="search-icon" type="text" placeholder="Search Here" onchange="search()"/>
             </div>
-            <div class="button" onclick="search()">
+            <div class="button">
               <p><i class="fa-regular fa-magnifying-glass"></i></p>
             </div>
           </div>
           <div class="icons-options">
-            <div class="login icon">
+            <div class="login icon" onclick="login()">
               <i class="fa-duotone fa-circle-user"></i>
-              <p>Login</p>
+              <p id="login-user">Login</p>
             </div>
-            <div class="register icon">
+            <div id = "register" class="register icon" onclick="register()">
               <i class="fa-light fa-pen-circle"></i>
               <p>Register</p>
+            </div>
+            <div id = "logout" class="logout icon" onclick="logout()">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <p>Logout</p>
             </div>
             <div class="wishlist icon">
               <i class="fa-light fa-heart"></i>
@@ -851,12 +855,11 @@
     <!-- Custom JavaScript -->
     <script src="./assets/javascript/script.js"></script>
     <script src="./assets/javascript/search.js"></script>
+    <script src="./assets/javascript/login.js"></script>
 
     <script>
       function ActiveClass(element) {
         element.classList.add("active");
-        //  element.removeClass('active');
-        //  element.addClass('active') ;
       }
     </script>
 

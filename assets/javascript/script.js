@@ -37,13 +37,12 @@ const blog_data = async () => {
   document.getElementById("cards").innerHTML = html;
 };
 
-
 const categories_data = async () => {
   const response = await fetch("./assets/data/items.json");
   let data = await response.json();
   let html = "";
   data.items.forEach((element) => {
-    if(element.type=="categories"){
+    if (element.type == "categories") {
       html += `
         <div class="item i-1">
         <div class="image">
@@ -75,14 +74,13 @@ const categories_data = async () => {
   document.getElementById("items").innerHTML = html;
 };
 
-
-const products_data = async()=>{
-    const response = await fetch("./assets/data/items.json");
-    const data = await response.json();
-    let html = "";
-    data.items.forEach((element)=>{
-      if(element.type=="products"){
-        html+= `
+const products_data = async () => {
+  const response = await fetch("./assets/data/items.json");
+  const data = await response.json();
+  let html = "";
+  data.items.forEach((element) => {
+    if (element.type == "products") {
+      html += `
         <div class="${element.item_class} item">
         <div class="item-image">
           <img src="${element.item_image}" alt="#">
@@ -126,13 +124,13 @@ const products_data = async()=>{
         </div>
       </div>
         `;
-      }
-    });
+    }
+  });
 
-    document.getElementById("items-block").innerHTML = html;
-}
-const buy_data = async()=>{
-  const response = await fetch("./assets/data/buy.json")
+  document.getElementById("items-block").innerHTML = html;
+};
+const buy_data = async () => {
+  const response = await fetch("./assets/data/buy.json");
   const data = await response.json();
   let html = "";
   data.buy.forEach((element) => {
@@ -144,7 +142,8 @@ const buy_data = async()=>{
     `;
   });
   document.getElementById("image-block").innerHTML = html;
-}
+};
+
 blog_data();
 categories_data();
 products_data();

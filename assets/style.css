@@ -145,6 +145,9 @@ a{
 .header .container .nav-2 .icons-options .icon p{
     margin-bottom: -10px;
 }
+.header .container .nav-2 .icons-options #logout{
+    display: none;
+}
 .header .container .nav-2 .icons-options .icon i{
     font-size: 40px;
 }
