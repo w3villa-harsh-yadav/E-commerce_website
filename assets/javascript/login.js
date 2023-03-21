@@ -3,7 +3,11 @@ function register() {
   let username = document.getElementById("runame").value;
   let email = document.getElementById("remail").value;
   let password = document.getElementById("rpass").value;
-
+  if(username == "" || email == "" || password == ""){
+    window.stop();
+    alert("Please enter all the details");
+    return;
+  }
   if (localStorage.getItem(email.toLowerCase())) {
     window.stop();
     alert("User Already Exist");
@@ -25,7 +29,11 @@ const login = () => {
   window.location.assign("login.html");
   let email = document.getElementById("lemail").value;
   let password = document.getElementById("lpass").value;
-
+  if(email == "" || password == ""){
+    window.stop();
+    alert("Please enter some credintials");
+    return;
+  }
   if (localStorage.getItem(email.toLowerCase())) {
     let user = JSON.parse(localStorage.getItem(email));
     if (password == user.password) {
