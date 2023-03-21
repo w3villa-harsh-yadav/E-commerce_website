@@ -169,8 +169,11 @@
           </div>
           <div class="cart">
             <div class="cart-details">
-              <span>0 item(s)-$0.00</span>
+              <span id="total-items">0 item(s)-$0.00</span>
               <i class="fa-solid fa-cart-shopping"></i>
+              <div id="cart-heading" class="cart-heading">
+                <i class="fa-solid fa-0"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -779,7 +782,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="pagination">
+          <div id="pagination" class="pagination">
             <button class="btn1" onclick="btn1click()"><i class="fa-solid fa-left"></i></button>
             <ul>
               <li class="link p-active" value="1" onclick="pActive(this)">1</li>
@@ -869,6 +872,7 @@
     <script src="./assets/javascript/script.js"></script>
     <script src="./assets/javascript/search.js"></script>
     <script src="./assets/javascript/login.js"></script>
+    <script src="./assets/javascript/cart.js"></script>
 
     <!-- ++++++ Active Class Function ++++++ -->
     <script>
@@ -885,6 +889,7 @@
           child.classList.remove("p-active")
         }
         element.classList.add("p-active")
+        search();
       }
 
       function btn1click(){

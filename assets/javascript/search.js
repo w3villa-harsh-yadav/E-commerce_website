@@ -53,8 +53,8 @@ const search = async () => {
       }
     }
   });
-
   document.getElementById("search-block").innerHTML = html;
+  document.getElementById("pagination").style.display = "flex";
   if (html != "") {
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";

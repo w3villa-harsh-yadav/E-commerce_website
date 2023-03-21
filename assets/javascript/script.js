@@ -38,6 +38,7 @@ const blog_data = async () => {
 };
 
 const categories_data = async () => {
+
   const response = await fetch("./assets/data/items.json");
   let data = await response.json();
   let html = "";
@@ -60,7 +61,7 @@ const categories_data = async () => {
         </div>
         <div class="row-2">
         <span class="input-btn">
-            <button>Add to Cart</button>
+            <button onclick="cart(this)" id="${element.id}" >Add to Cart</button>
         </span>
         <span class="icons">
             <i class="fa-light fa-heart heart"></i>
@@ -100,7 +101,7 @@ const products_data = async () => {
           <div class="row-2 ptbs">
             <span class="input-btn">
               <input type="number" />
-              <button>Add to Cart</button>
+              <button onclick="cart(this)" id="${element.id}">Add to Cart</button>
             </span>
             <span class="icons">
               <i class="fa-light fa-heart heart"></i>

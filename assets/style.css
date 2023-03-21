@@ -182,6 +182,18 @@ a{
     padding: 10px;
     border-radius: 10px;
 }
+.header .container .nav-2 .cart .cart-details .cart-heading{
+    position: relative;
+    display: none;
+}
+.header .container .nav-2 .cart .cart-details .cart-heading i{
+    background-color: white;
+    color: black;
+    position: absolute;
+    right: -10px;
+    top: -70px;
+    font-size: 15px;
+}
 /* ++ nav-2  media-query classes++ */
 @media screen and (max-width:1750px){
     .header .container .nav-2 .cart .cart-details span{
@@ -1614,11 +1626,11 @@ footer .footer-top i{
     font-size: 1.7rem;
     margin: 0 10px;
 }
+
 footer .pagination{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondry-bg-color);
 }
 footer .pagination button{
     border: none;
