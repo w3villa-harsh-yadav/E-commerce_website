@@ -1614,6 +1614,29 @@ footer .footer-top i{
     font-size: 1.7rem;
     margin: 0 10px;
 }
+footer .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondry-bg-color);
+}
+footer .pagination button{
+    border: none;
+}
+footer .pagination ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px 10px;
+}
+footer .p-active{
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    color: #fff;
+}
+footer .pagination ul li{
+    padding: 0px 10px;
+}
 footer .footer-content{
     display: grid;
     grid-template-columns: repeat(4,1fr);

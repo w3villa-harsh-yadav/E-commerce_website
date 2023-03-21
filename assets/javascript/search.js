@@ -2,10 +2,15 @@ const search = async () => {
   const response = await fetch("./assets/data/items.json");
   const data = await response.json();
   const search = document.getElementById("search-icon").value;
+  let value = Number(
+    document.getElementsByClassName("p-active")[0].getAttribute("value")
+  );
+  let a = value * 4 - 4;
   let html = "";
   data.items.forEach((element) => {
     if (element.item_name.toLowerCase().match(search.toLowerCase())) {
-      html += `
+      if ((element.id <= value * 4) & (element.id > a)) {
+        html += `
             <div class="${element.item_class} item">
         <div class="item-image">
           <img src="${element.item_image}" alt="#">
@@ -45,11 +50,12 @@ const search = async () => {
         </div>
       </div>
             `;
+      }
     }
   });
 
-  document.getElementById('search-block').innerHTML = html;
-  if(html!=""){
+  document.getElementById("search-block").innerHTML = html;
+  if (html != "") {
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";
     document.getElementById("why").style.display = "none";
@@ -57,9 +63,9 @@ const search = async () => {
     document.getElementById("featured2").style.display = "none";
     document.getElementById("shop").style.display = "none";
     document.getElementById("gallery").style.display = "none";
-    document.getElementById("blog").style.display = "none";    
-    document.getElementById("people").style.display = "none";    
-    document.getElementById("viewed").style.display = "none";    
-    document.getElementById("footer-top").style.display = "none";    
+    document.getElementById("blog").style.display = "none";
+    document.getElementById("people").style.display = "none";
+    document.getElementById("viewed").style.display = "none";
+    document.getElementById("footer-top").style.display = "none";
   }
 };

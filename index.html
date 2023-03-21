@@ -779,6 +779,19 @@
           </div>
         </div>
         <div class="container">
+          <div class="pagination">
+            <button class="btn1" onclick="btn1click()"><i class="fa-solid fa-left"></i></button>
+            <ul>
+              <li class="link p-active" value="1" onclick="pActive(this)">1</li>
+              <li class="link" value="2" onclick="pActive(this)">2</li>
+              <li class="link" value="3" onclick="pActive(this)">3</li>
+              <li class="link" value="4" onclick="pActive(this)">4</li>
+              <li class="link" value="5" onclick="pActive(this)">5</li>
+            </ul>
+            <button class="btn2" onclick="btn2click()"><i class="fa-solid fa-right"></i></button>
+          </div>
+        </div>
+        <div class="container">
           <div class="footer-content">
             <div class="footer-about footer-comman">
               <h2>About Us</h2>
@@ -857,12 +870,41 @@
     <script src="./assets/javascript/search.js"></script>
     <script src="./assets/javascript/login.js"></script>
 
+    <!-- ++++++ Active Class Function ++++++ -->
     <script>
       function ActiveClass(element) {
         for(const child of element.parentNode.children){
           child.classList.remove("active")
         }
         element.classList.add("active")
+        console.log(element.value)
+      }
+
+      function pActive(element){
+        for(const child of element.parentNode.children){
+          child.classList.remove("p-active")
+        }
+        element.classList.add("p-active")
+      }
+
+      function btn1click(){
+        let value = document.getElementsByClassName("p-active")[0].getAttribute("value");
+        if(value>1){
+          let elem = document.getElementsByClassName("p-active")[0]
+          elem.classList.remove("p-active")
+          elem.previousElementSibling.classList.add("p-active")
+        }
+        search();
+      }
+
+      function btn2click(){
+        let value = document.getElementsByClassName("p-active")[0].getAttribute("value");
+        if(value<5){
+          let elem = document.getElementsByClassName("p-active")[0]
+          elem.classList.remove("p-active")
+          elem.nextElementSibling.classList.add("p-active")
+        }
+        search();
       }
     </script>
 
@@ -1001,5 +1043,6 @@
         },
       });
     </script>
+  
   </body>
 </html>
