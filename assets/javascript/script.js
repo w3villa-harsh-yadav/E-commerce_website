@@ -64,7 +64,7 @@ const categories_data = async () => {
             <button onclick="cart(this)" id="${element.id}" >Add to Cart</button>
         </span>
         <span class="icons">
-            <i class="fa-light fa-heart heart"></i>
+            <i class="fa-light fa-heart heart" onclick="wishlist(this)" id="${element.id}"></i>
             <i class="fa-thin fa-arrow-right-arrow-left arrow"></i>
         </span>
         </div>
@@ -104,7 +104,7 @@ const products_data = async () => {
               <button onclick="cart(this)" id="${element.id}">Add to Cart</button>
             </span>
             <span class="icons">
-              <i class="fa-light fa-heart heart"></i>
+            <i class="fa-light fa-heart heart" onclick="wishlist(this)" id="${element.id}"></i>
               <i class="fa-thin fa-arrow-right-arrow-left arrow"></i>
             </span>
           </div>

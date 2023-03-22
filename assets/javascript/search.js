@@ -36,7 +36,7 @@ const search = async (elem) => {
         <div class="row-2 ptbs">
           <span class="input-btn">
             <input type="number" />
-            <button>Add to Cart</button>
+            <button onclick="cart(this)" id="${arr[i].id}" >Add to Cart</button>
             </span>
             <span class="icons">
             <i class="fa-light fa-heart heart"></i>
@@ -64,9 +64,8 @@ const search = async (elem) => {
   }
   
   document.getElementById("search-block").innerHTML = html;
-  document.getElementById("pagination").style.display = "flex";
-
   if (html != "") {
+    console.log("filled")
     document.getElementById("search-block").style.display = "flex";
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";
@@ -80,6 +79,7 @@ const search = async (elem) => {
     document.getElementById("viewed").style.display = "none";
     document.getElementById("footer-top").style.display = "none";
   } else {
+    console.log("empty")
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";
     document.getElementById("why").style.display = "none";
@@ -104,5 +104,11 @@ const setpagination = (arr) =>{
       pagination_html += `<li class="link" value="${j+1}" onclick="pActive(this)">${j+1}</li>`;
     }
   }
-  document.getElementById("pagination-list").innerHTML = pagination_html
+  if(pagination_html != ""){
+    document.getElementById("pagination-list").innerHTML = pagination_html
+    document.getElementById("pagination").style.display = "flex";
+  }
+  else{
+    document.getElementById("pagination").style.display = "none";
+  }
 }

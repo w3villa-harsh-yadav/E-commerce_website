@@ -94,6 +94,7 @@ const loadcart = async () => {
     document.getElementById("cart-block").innerHTML = html;
     document.getElementById("cart-block").style.display = "flex";
     if (html != "") {
+      document.getElementById("wish-block").style.display = "none";
       document.getElementById("hero").style.display = "none";
       document.getElementById("grey").style.display = "none";
       document.getElementById("why").style.display = "none";
@@ -109,6 +110,9 @@ const loadcart = async () => {
       alert("Cart is empty");
       window.location.assign("index.html");
     }
+  }
+  else {
+    alert("Cart is empty");
   }
 };
 

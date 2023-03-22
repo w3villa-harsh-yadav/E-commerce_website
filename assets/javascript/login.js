@@ -3,7 +3,7 @@ function register() {
   let username = document.getElementById("runame").value;
   let email = document.getElementById("remail").value;
   let password = document.getElementById("rpass").value;
-  if(username == "" || email == "" || password == ""){
+  if (username == "" || email == "" || password == "") {
     window.stop();
     alert("Please enter all the details");
     return;
@@ -29,7 +29,7 @@ const login = () => {
   window.location.assign("login.html");
   let email = document.getElementById("lemail").value;
   let password = document.getElementById("lpass").value;
-  if(email == "" || password == ""){
+  if (email == "" || password == "") {
     window.stop();
     alert("Please enter some credintials");
     return;
@@ -73,7 +73,7 @@ function logged() {
       name = user.username;
     }
   });
-  if (name != "") {
+  if (name != ""){
     document.getElementById("login-user").innerText = name;
     document.getElementById("logout").style.display = "flex";
     document.getElementById("register").style.display = "none";
@@ -87,6 +87,13 @@ function logged() {
         "total-items"
       ).innerText = `${cart1.length} item(s)-Rs.${totalprice}`;
       document.getElementById("cart-heading").style.display = "block";
+    }
+    if (localStorage.getItem("wl")){
+      wl = JSON.parse(localStorage.getItem("wl"));
+      document.getElementById(
+        "wish-heading"
+      ).innerHTML = `<i class="fa-solid fa-${wl.length}"></i>`;
+      document.getElementById("wish-heading").style.display = "block";
     }
   } else {
     window.location.assign("login.html");

@@ -134,6 +134,7 @@
                 type="text"
                 placeholder="Search Here"
                 onchange="search(this)"
+                onkeypress="search(this)"
               />
             </div>
             <div class="button">
@@ -154,8 +155,11 @@
               <p>Logout</p>
             </div>
             <div class="wishlist icon">
-              <i class="fa-light fa-heart"></i>
+              <i class="fa-light fa-heart" onclick="loadwishlist()"></i>
               <p>Wishlist</p>
+              <div id="wish-heading" class="wish-heading">
+                <i class="fa-solid fa-0"></i>
+              </div>
             </div>
             <div class="compare icon">
               <i class="fa-thin fa-arrow-right-arrow-left"></i>
@@ -210,6 +214,13 @@
             <p><i class="fa-solid fa-message-lines"></i> BLOG</p>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- wish Section -->
+    <div class="wish-section" id="wish-section">
+      <div class="container">
+        <div id="wish-block" class="wish-block ptb"></div>
       </div>
     </div>
 
@@ -593,11 +604,14 @@
             advanced typography styles your post page design will be unmatched.
           </div>
           <div class="categories">
-            <div class="latestpost">
-              <a href="#">Latest Post</a>
+            <!-- <div class="top active" onclick="ActiveClass(this)">
+              <p>Top Categories</p>
+            </div> -->
+            <div class="latestpost active" onclick="ActiveClass(this)">
+              <p>Latest Post</p>
             </div>
-            <div class="mostread">
-              <a href="#">Most Read</a>
+            <div class="mostread" onclick="ActiveClass(this)">
+              <p>Most Read</p>
             </div>
           </div>
           <div id="cards" class="cards ptb"></div>
@@ -801,10 +815,6 @@
             </button>
             <ul id="pagination-list">
               <li class="link p-active" id="link1" value="1" onclick="pActive(this)">1</li>
-              <!-- <li class="link" value="2" onclick="pActive(this)">2</li>
-              <li class="link" value="3" onclick="pActive(this)">3</li>
-              <li class="link" value="4" onclick="pActive(this)">4</li>
-              <li class="link" value="5" onclick="pActive(this)">5</li> -->
             </ul>
             <button class="btn2" onclick="btn2click()">
               <i class="fa-solid fa-right"></i>
@@ -815,6 +825,7 @@
           <div class="footer-content">
             <div class="footer-about footer-comman">
               <h2>About Us</h2>
+              <div class="line"></div>
               <ul>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Delivery</a></li>
@@ -825,6 +836,7 @@
             </div>
             <div class="footer-customer footer-comman">
               <h2>Customer Service</h2>
+              <div class="line"></div>
               <ul>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Returns</a></li>
@@ -835,6 +847,7 @@
             </div>
             <div class="footer-account footer-comman">
               <h2>My Account</h2>
+              <div class="line"></div>
               <ul>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Order History</a></li>
@@ -890,6 +903,7 @@
     <script src="./assets/javascript/search.js"></script>
     <script src="./assets/javascript/login.js"></script>
     <script src="./assets/javascript/cart.js"></script>
+    <script src="./assets/javascript/wishlist.js"></script>
 
     <!-- ++++++ Active Class Function ++++++ -->
     <script>
@@ -1069,5 +1083,6 @@
         },
       });
     </script>
+  
   </body>
 </html>
