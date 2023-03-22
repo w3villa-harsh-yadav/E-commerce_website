@@ -95,9 +95,7 @@
           <div class="l2">
             <ul class="list">
               <li>
-                <a href="#"
-                  >🇮🇳 Hindi <i class="fa-solid fa-caret-down"></i
-                ></a>
+                <a href="#">🇮🇳 Hindi <i class="fa-solid fa-caret-down"></i></a>
               </li>
               <li>
                 <a href="#"
@@ -131,7 +129,12 @@
               <p>All &nbsp<i class="fa-solid fa-caret-down"></i></p>
             </div>
             <div class="input">
-              <input id="search-icon" type="text" placeholder="Search Here" onchange="search()"/>
+              <input
+                id="search-icon"
+                type="text"
+                placeholder="Search Here"
+                onchange="search(this)"
+              />
             </div>
             <div class="button">
               <p><i class="fa-regular fa-magnifying-glass"></i></p>
@@ -142,11 +145,11 @@
               <i class="fa-duotone fa-circle-user"></i>
               <p id="login-user">Login</p>
             </div>
-            <div id = "register" class="register icon" onclick="register()">
+            <div id="register" class="register icon" onclick="register()">
               <i class="fa-light fa-pen-circle"></i>
               <p>Register</p>
             </div>
-            <div id = "logout" class="logout icon" onclick="logout()">
+            <div id="logout" class="logout icon" onclick="logout()">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
               <p>Logout</p>
             </div>
@@ -170,7 +173,7 @@
           <div class="cart">
             <div class="cart-details">
               <span id="total-items">0 item(s)-$0.00</span>
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-cart-shopping" onclick="loadcart()"></i>
               <div id="cart-heading" class="cart-heading">
                 <i class="fa-solid fa-0"></i>
               </div>
@@ -210,11 +213,17 @@
       </div>
     </div>
 
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart-section">
+      <div class="container">
+        <div id="cart-block" class="cart-block ptb"></div>
+      </div>
+    </div>
+
     <!-- Search Section -->
     <div class="search-section" id="search-section">
       <div class="container">
-        <div id="search-block" class="search-block ptb">      
-        </div>
+        <div id="search-block" class="search-block ptb"></div>
       </div>
     </div>
 
@@ -375,8 +384,7 @@
               <p>Fashion</p>
             </div>
           </div>
-          <div id="image-block" class="image-block ptb">
-          </div>
+          <div id="image-block" class="image-block ptb"></div>
         </div>
       </div>
     </div>
@@ -402,21 +410,28 @@
             </p>
           </div>
           <div class="categories">
-            <div id="featured" class="featured active" onclick="ActiveClass(this)">
+            <div
+              id="featured"
+              class="featured active"
+              onclick="ActiveClass(this)"
+            >
               <p>Featured</p>
             </div>
             <div id="latest" class="latest" onclick="ActiveClass(this)">
-            <p>Latest</p>
+              <p>Latest</p>
             </div>
-            <div id="bestsellers" class="bestsellers" onclick="ActiveClass(this)">
+            <div
+              id="bestsellers"
+              class="bestsellers"
+              onclick="ActiveClass(this)"
+            >
               <p>bestsellers</p>
             </div>
             <div id="specials" class="specials" onclick="ActiveClass(this)">
               <p>Specials</p>
             </div>
           </div>
-          <div id="items-block" class="items-block ptb">
-          </div>
+          <div id="items-block" class="items-block ptb"></div>
           <div class="button ptb">
             <button>See all Products</button>
           </div>
@@ -465,8 +480,7 @@
                 <h3>New in Fashion</h3>
               </div>
               <div class="line"></div>
-              <div id="items" class="items ptbs">
-              </div>
+              <div id="items" class="items ptbs"></div>
             </div>
           </div>
         </div>
@@ -586,8 +600,7 @@
               <a href="#">Most Read</a>
             </div>
           </div>
-          <div id="cards" class="cards ptb">
-          </div>
+          <div id="cards" class="cards ptb"></div>
         </div>
       </div>
     </div>
@@ -783,15 +796,19 @@
         </div>
         <div class="container">
           <div id="pagination" class="pagination">
-            <button class="btn1" onclick="btn1click()"><i class="fa-solid fa-left"></i></button>
-            <ul>
-              <li class="link p-active" value="1" onclick="pActive(this)">1</li>
-              <li class="link" value="2" onclick="pActive(this)">2</li>
+            <button class="btn1" onclick="btn1click()">
+              <i class="fa-solid fa-left"></i>
+            </button>
+            <ul id="pagination-list">
+              <li class="link p-active" id="link1" value="1" onclick="pActive(this)">1</li>
+              <!-- <li class="link" value="2" onclick="pActive(this)">2</li>
               <li class="link" value="3" onclick="pActive(this)">3</li>
               <li class="link" value="4" onclick="pActive(this)">4</li>
-              <li class="link" value="5" onclick="pActive(this)">5</li>
+              <li class="link" value="5" onclick="pActive(this)">5</li> -->
             </ul>
-            <button class="btn2" onclick="btn2click()"><i class="fa-solid fa-right"></i></button>
+            <button class="btn2" onclick="btn2click()">
+              <i class="fa-solid fa-right"></i>
+            </button>
           </div>
         </div>
         <div class="container">
@@ -877,39 +894,43 @@
     <!-- ++++++ Active Class Function ++++++ -->
     <script>
       function ActiveClass(element) {
-        for(const child of element.parentNode.children){
-          child.classList.remove("active")
+        for (const child of element.parentNode.children) {
+          child.classList.remove("active");
         }
-        element.classList.add("active")
-        console.log(element.value)
+        element.classList.add("active");
+        console.log(element.value);
       }
 
-      function pActive(element){
-        for(const child of element.parentNode.children){
-          child.classList.remove("p-active")
+      function pActive(element) {
+        for (const child of element.parentNode.children) {
+          child.classList.remove("p-active");
         }
-        element.classList.add("p-active")
-        search();
+        element.classList.add("p-active");
+        search(this);
       }
 
-      function btn1click(){
-        let value = document.getElementsByClassName("p-active")[0].getAttribute("value");
-        if(value>1){
-          let elem = document.getElementsByClassName("p-active")[0]
-          elem.classList.remove("p-active")
-          elem.previousElementSibling.classList.add("p-active")
+      function btn1click() {
+        let value = document
+          .getElementsByClassName("p-active")[0]
+          .getAttribute("value");
+        if (value > 1) {
+          let elem = document.getElementsByClassName("p-active")[0];
+          elem.classList.remove("p-active");
+          elem.previousElementSibling.classList.add("p-active");
         }
-        search();
+        search(this);
       }
 
-      function btn2click(){
-        let value = document.getElementsByClassName("p-active")[0].getAttribute("value");
-        if(value<5){
-          let elem = document.getElementsByClassName("p-active")[0]
-          elem.classList.remove("p-active")
-          elem.nextElementSibling.classList.add("p-active")
+      function btn2click() {
+        let value = document
+          .getElementsByClassName("p-active")[0]
+          .getAttribute("value");
+        if (value < 5) {
+          let elem = document.getElementsByClassName("p-active")[0];
+          elem.classList.remove("p-active");
+          elem.nextElementSibling.classList.add("p-active");
         }
-        search();
+        search(this);
       }
     </script>
 
@@ -1048,6 +1069,5 @@
         },
       });
     </script>
-  
   </body>
 </html>
