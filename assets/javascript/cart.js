@@ -94,6 +94,8 @@ const loadcart = async () => {
     document.getElementById("cart-block").innerHTML = html;
     document.getElementById("cart-block").style.display = "flex";
     if (html != "") {
+      document.getElementById("pagination").style.display = "none";
+      document.getElementById("search-block").style.display = "none";
       document.getElementById("wish-block").style.display = "none";
       document.getElementById("hero").style.display = "none";
       document.getElementById("grey").style.display = "none";

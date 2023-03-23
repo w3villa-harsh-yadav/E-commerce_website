@@ -39,7 +39,7 @@ const search = async (elem) => {
             <button onclick="cart(this)" id="${arr[i].id}" >Add to Cart</button>
             </span>
             <span class="icons">
-            <i class="fa-light fa-heart heart"></i>
+            <i class="fa-light fa-heart heart" onclick="wishlist(this)" id="${arr[i].id}"></i>
             <i class="fa-thin fa-arrow-right-arrow-left arrow"></i>
             </span>
             </div>
@@ -65,8 +65,9 @@ const search = async (elem) => {
   
   document.getElementById("search-block").innerHTML = html;
   if (html != "") {
-    console.log("filled")
     document.getElementById("search-block").style.display = "flex";
+    document.getElementById("wish-block").style.display = "none";
+    document.getElementById("cart-block").style.display = "none";
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";
     document.getElementById("why").style.display = "none";
@@ -79,7 +80,6 @@ const search = async (elem) => {
     document.getElementById("viewed").style.display = "none";
     document.getElementById("footer-top").style.display = "none";
   } else {
-    console.log("empty")
     document.getElementById("hero").style.display = "none";
     document.getElementById("grey").style.display = "none";
     document.getElementById("why").style.display = "none";
