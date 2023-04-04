@@ -95,6 +95,14 @@ function logged() {
       ).innerHTML = `<i class="fa-solid fa-${wl.length}"></i>`;
       document.getElementById("wish-heading").style.display = "block";
     }
+    let x = document.cookie;
+    console.log(x)
+    if(x == "loadcart"){
+      document.cookie = " path=/;";
+      // loadcart();
+    }
+    else{
+    }
   } else {
     window.location.assign("login.html");
   }

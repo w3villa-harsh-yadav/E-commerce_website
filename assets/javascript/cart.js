@@ -47,6 +47,10 @@ const cart = async (element) => {
 
 const loadcart = async () => {
   if (localStorage.getItem("cart1")) {
+    if(window.location.href == "http://127.0.0.1:5501/search.html"){
+      window.location.assign("index.html")
+      document.cookie = "loadcart; path=/;"
+    }
     cart1 = JSON.parse(localStorage.getItem("cart1"));
     let html = "";
     for (let i = 0; i < cart1.length; i++) {
