@@ -98,8 +98,8 @@ function logged() {
     let x = document.cookie;
     console.log(x)
     if(x == "loadcart"){
-      document.cookie = " path=/;";
-      // loadcart();
+      // document.cookie = " path=/;";
+      loadcart();
     }
     else{
     }

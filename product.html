@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+
+    <!-- Link Icons -->
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Default"
+      disabled
+      href="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-df1bd4d47fc6bf066625b27b61ccafe7.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css"
+    />
+
+    <!-- Link Owl CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Range Slider CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"
+    />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/search.css" />
+    <link rel="stylesheet" href="./assets/product.css" />
+  </head>
+  <body>
+    <div id="header" class="header">
+      <div class="container">
+        <!-- 1st Nav-bar -->
+        <div class="nav-bar nav-1 ptbs">
+          <div class="l1">
+            <ul class="list">
+              <li>
+                <a href="#"><i class="fa-light fa-house"></i> Home</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-light fa-address-card"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-light fa-envelope"></i> Contact</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-light fa-circle-question"></i> FAQ
+                  <i class="fa-solid fa-caret-down"></i
+                ></a>
+              </li>
+            </ul>
+            <ul class="list-sm">
+              <li>
+                <a href="#"><i class="fa-duotone fa-circle-user"></i> Login</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-light fa-pen-circle"></i> Register</a>
+              </li>
+            </ul>
+          </div>
+          <div class="l2">
+            <ul class="list">
+              <li>
+                <a href="#">🇮🇳 Hindi <i class="fa-solid fa-caret-down"></i></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-light fa-indian-rupee-sign"></i> Indian Rupees
+                  <i class="fa-solid fa-caret-down"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="l3">
+            <ul class="list">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-bars"></i> More Menus
+                  <i class="fa-solid fa-caret-down"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-duotone fa-truck"></i> Delivery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2nd Nav-bar -->
+        <div class="nav-bar nav-2 ptbs">
+          <div class="heading">
+            <h1>Journal</h1>
+          </div>
+          <div class="search">
+            <div class="button">
+              <p>All &nbsp<i class="fa-solid fa-caret-down"></i></p>
+            </div>
+            <div class="input">
+              <input
+                id="search-icon"
+                type="text"
+                placeholder="Search Here"
+                onchange="url()"
+              />
+            </div>
+            <div class="button">
+              <p><i class="fa-regular fa-magnifying-glass"></i></p>
+            </div>
+          </div>
+          <div class="icons-options">
+            <div class="login icon" onclick="login()">
+              <i class="fa-duotone fa-circle-user"></i>
+              <p id="login-user">Login</p>
+            </div>
+            <div id="register" class="register icon" onclick="register()">
+              <i class="fa-light fa-pen-circle"></i>
+              <p>Register</p>
+            </div>
+            <div id="logout" class="logout icon" onclick="logout()">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <p>Logout</p>
+            </div>
+            <div class="wishlist icon">
+              <i class="fa-light fa-heart" onclick="loadwishlist()"></i>
+              <p>Wishlist</p>
+              <div id="wish-heading" class="wish-heading">
+                <i class="fa-solid fa-0"></i>
+              </div>
+            </div>
+            <div class="compare icon">
+              <i class="fa-thin fa-arrow-right-arrow-left"></i>
+              <p>Compare</p>
+            </div>
+          </div>
+          <div class="icon-sm">
+            <div class="search-icon">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </div>
+            <div class="nav icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="cart-details">
+              <span id="total-items">0 item(s)-$0.00</span>
+              <i class="fa-solid fa-cart-shopping" onclick="loadcart()"></i>
+              <div id="cart-heading" class="cart-heading">
+                <i class="fa-solid fa-0"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Departments Section -->
+    <div class="blue-section">
+      <div class="container">
+        <div class="all-dept">
+          <div class="dept">
+            <p><i class="fa-solid fa-align-justify"></i> ALL DEPARTMENTS</p>
+            <div class="sale-heading">Sale</div>
+          </div>
+          <div class="multi">
+            <p>MULTILEVEL</p>
+          </div>
+          <div class="mega">
+            <p>MEGA MENU</p>
+            <div class="new-heading">New</div>
+          </div>
+          <div class="width">
+            <p>FULL WIDTH</p>
+          </div>
+        </div>
+        <div class="numb">
+          <div class="phone">
+            <p><i class="fa-solid fa-phone-volume"></i> 1.800.555.6789</p>
+          </div>
+          <div class="blog">
+            <p><i class="fa-solid fa-message-lines"></i> BLOG</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product section -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="product-header">
+          <i class="fa-thin fa-house"></i>
+          <i class="fa-thin fa-arrow-right"></i>
+          Search
+          <i class="fa-thin fa-arrow-right"></i>
+          Apple Cinema 30"
+        </div>
+      </div>
+      <div class="hero-2">
+        <div class="container">
+          <div class="product-heading">Apple Cinema 30"</div>
+          <!-- ++++ Hero content ++++ -->
+          <div class="hero-content">
+            <div class="content-1">
+              <div class="side-image">
+                <div class="img first-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="img first-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="img middle-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="img middle-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="img last-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="img last-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="#"
+                  />
+                </div>
+                <div class="drpdn">
+                  <i class="fa-duotone fa-circle-chevron-down"></i>
+                </div>
+              </div>
+              <div class="main-image">
+                <img
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="content-2">
+              <div class="sub-heading">
+                <div class="desc">Description</div>
+                <div class="specs">Specifications</div>
+                <div class="rev">Review</div>
+                <div class="custom">Custom Tabs</div>
+              </div>
+              <div class="product-desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+                ducimus iste hic, nobis laboriosam ad eligendi beatae rem dolore
+                minima, recusandae laborum et delectus architecto,
+                <span id="blur">
+                  ratione saepe quasi accusantium modi atque quis vero?
+                  Explicabo delectus optio at voluptas
+                </span>
+                <span id="blur1">
+                  ratione saepe quasi accusantium modi atque quis vero?
+                  Explicabo delectus optio at voluptas
+                </span>
+                <span class="button">
+                  <button>
+                    <i class="fa-solid fa-caret-down"></i> Show more
+                  </button>
+                </span>
+              </div>
+              <div class="ratings">
+                <span>
+                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                  <i class="fa-thin fa-star"></i>
+                </span>
+                <span class="review">
+                  <a href="#">Based on 1 reviews</a>
+                  <a href="#">Write a review</a>
+                </span>
+              </div>
+              <div class="price-stock">
+                <div class="price-section">
+                  <div class="cutprice">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    78.46
+                  </div>
+                  <div class="price">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    70.46
+                    <div class="offers">
+                      <div>
+                        Ex.Tax:
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 70.61
+                      </div>
+                      <div>Price in Reward Points: 400</div>
+                      <div>
+                        10 or more
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 69.04
+                      </div>
+                      <div>
+                        20 or more
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 60.41
+                      </div>
+                      <div>
+                        30 or more
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 51.78
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stock-section">
+                  <div class="stock-details">
+                    <div class="stock-tick">
+                      <i class="fa-light fa-check" style="color: #0ce959"></i>
+                      In Stock
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-circle"
+                        style="color: #000000; font-size: 10px"
+                      ></i>
+                      Reward Points: 100
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-circle"
+                        style="color: #000000; font-size: 10px"
+                      ></i>
+                      Model: Product 15
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-circle"
+                        style="color: #000000; font-size: 10px"
+                      ></i>
+                      Weight: 12.05Kg
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-circle"
+                        style="color: #000000; font-size: 10px"
+                      ></i>
+                      Dimensions: 1.00cm x 2.00cm x 3.00cm
+                    </div>
+                  </div>
+                  <div class="apple-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1621768216002-5ac171876625?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXBwbGUlMjBsb2dvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt="#"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-section">
+                <div class="another-select inp-text pb">
+                  Another Select *
+                  <div class="drp-select pt">
+                    <select name="select">
+                      <option value="1">Please Select</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="select-list inp-text pb">
+                  Select List *
+                  <div class="drp-select pt">
+                    <select name="select">
+                      <option value="1">Select an option</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="radio pb">
+                  Radio *
+                  <div class="input pt">
+                    <div>
+                      <input type="radio" name="" id="" /> Small(+₹7.85)
+                    </div>
+                    <div>
+                      <input type="radio" name="" id="" /> Medium(+₹15.69)
+                    </div>
+                    <div>
+                      <input type="radio" name="" id="" /> Large(+₹23.54)
+                    </div>
+                  </div>
+                </div>
+                <div class="color pb">
+                  Single Choice(with Image *)
+                  <div class="circle pt">
+                    <i class="fa-solid fa-circle" style="color: #00ccff"></i>
+                    <i class="fa-solid fa-circle" style="color: #bb00ff"></i>
+                    <i class="fa-solid fa-circle" style="color: #b0b0b0"></i>
+                    <i class="fa-solid fa-circle" style="color: #ff2929"></i>
+                  </div>
+                </div>
+                <div class="text pb">
+                  Text *
+                  <div class="textinput pt">
+                    <input type="text" name="" id="" placeholder="test" />
+                  </div>
+                </div>
+                <div class="textarea pb">
+                  Textarea *
+                  <div class="textarea-input pt">
+                    <textarea
+                      name=""
+                      id=""
+                      cols="61"
+                      rows="5"
+                      placeholder="textarea"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="file-upload pb">
+                  File *
+                  <div class="fileinput pt">
+                    <button>Upload a File</button>
+                  </div>
+                </div>
+                <div class="date calender pb">
+                  Date *
+                  <div class="date-input pt">
+                    <input type="text" name="" id="" placeholder="2011-02-20" />
+                    <button><i class="fa-solid fa-calendar-days"></i></button>
+                  </div>
+                </div>
+                <div class="time calender pb">
+                  Time *
+                  <div class="date-input pt">
+                    <input type="text" name="" id="" placeholder="22:25" />
+                    <button><i class="fa-solid fa-calendar-days"></i></button>
+                  </div>
+                </div>
+                <div class="date&time calender pb">
+                  Date & Time *
+                  <div class="date-input pt">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="2011-02-20 22:25"
+                    />
+                    <button><i class="fa-solid fa-calendar-days"></i></button>
+                  </div>
+                </div>
+                <div class="addtocart">
+                  <div class="inputrange">
+                    <input type="number" name="" id="" placeholder="2" />
+                  </div>
+                  <div class="addtocartbtn">
+                    <button>
+                      <i class="fa-solid fa-cart-shopping"></i> 
+                      <span class="cart-text">Add to cart
+
+                      </span>
+                    </button>
+                  </div>
+                  <div class="buy-now">
+                    <button>
+                      <i class="fa-regular fa-circle-dollar"></i> 
+                      <span class="buy-text">
+                        Buy now
+                    </span>
+                    </button>
+                  </div>
+                  <div class="question-mark">
+                    <button>
+                      <i class="fa-regular fa-circle-question"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="compare-icons pb">
+                  <div class="wishlist pt">
+                    <i class="fa-light fa-heart" style="color: #ff000d"></i>
+                    <span class="wish-text">Add to wishlist</span>
+                  </div>
+                  <div class="compare pt">
+                    <i
+                      class="fa-regular fa-arrow-right-arrow-left"
+                      style="color: #005eff"
+                    ></i>
+                    <span class="compare-text">Compare this product</span>
+                  </div>
+                </div>
+                <div class="minimum">
+                  <i
+                    class="fa-sharp fa-solid fa-circle-info"
+                    style="color: #248dc2"
+                  ></i>
+                  This product has a minimum quantity of 2.
+                </div>
+                <div class="companies-logo">
+                  <i
+                    class="fa-brands fa-square-facebook"
+                    style="color: #c2c2c2"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-twitter"
+                    style="color: #c4c4c4"
+                  ></i>
+                  <i
+                    class="fa-brands fa-square-google-plus"
+                    style="color: #bababa"
+                  ></i>
+                  <i
+                    class="fa-duotone fa-square-envelope"
+                    style="
+                      --fa-primary-opacity: 0.4;
+                      --fa-secondary-opacity: 0.2;
+                    "
+                  ></i>
+                  <i class="fa-solid fa-square-plus" style="color: #c4c4c5"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ++++ Related-products ++++ -->
+    <div class="related-products">
+      <div class="container">
+        <div class="row-1-content">
+          <div class="heading1">Related Products</div>
+          <div class="heading2">People Also Bought</div>
+        </div>
+        <div class="row-2-content">
+          <div id="items" class="items"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagination" class="pagination">
+      <button class="btn1" onclick="btn1click()">
+        <i class="fa-solid fa-left"></i>
+      </button>
+      <ul id="pagination-list">
+        <li class="link p-active" id="link1" value="1" onclick="pActive(this)">
+          1
+        </li>
+      </ul>
+      <button class="btn2" onclick="btn2click()">
+        <i class="fa-solid fa-right"></i>
+      </button>
+    </div>
+
+    <div id="viewed" class="most-viewed">
+      <div class="container">
+        <div class="most-viewed-section">
+          <h1>MOST VIEWED</h1>
+          <div class="cards">
+            <div class="card">
+              <div class="img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcqawCmTE0FK3CpaK1di9zZQHO8KRgFvi0Q&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h2>Oversized Sunglasses</h2>
+                <span>$397.00</span>
+                <div>
+                  <i class="fa-solid fa-cart-shopping-fast"></i>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcqawCmTE0FK3CpaK1di9zZQHO8KRgFvi0Q&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h2>Oversized Sunglasses</h2>
+                <span>$397.00</span>
+                <div>
+                  <i class="fa-solid fa-cart-shopping-fast"></i>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcqawCmTE0FK3CpaK1di9zZQHO8KRgFvi0Q&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h2>Oversized Sunglasses</h2>
+                <span>$397.00</span>
+                <div>
+                  <i class="fa-solid fa-cart-shopping-fast"></i>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcqawCmTE0FK3CpaK1di9zZQHO8KRgFvi0Q&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h2>Oversized Sunglasses</h2>
+                <span>$397.00</span>
+                <div>
+                  <i class="fa-solid fa-cart-shopping-fast"></i>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-body">
+        <div id="footer-top" class="footer-top">
+          <div class="container">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-slack"></i></div>
+            <div><i class="fa-brands fa-google"></i></div>
+            <div><i class="fa-brands fa-twitter"></i></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-about footer-comman">
+              <h2>About Us</h2>
+              <div class="line"></div>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Custom Links</a></li>
+              </ul>
+            </div>
+            <div class="footer-customer footer-comman">
+              <h2>Customer Service</h2>
+              <div class="line"></div>
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Unlimited Links</a></li>
+              </ul>
+            </div>
+            <div class="footer-account footer-comman">
+              <h2>My Account</h2>
+              <div class="line"></div>
+              <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">Affilates</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Gift Cerificates</a></li>
+              </ul>
+            </div>
+            <div class="footer-news">
+              <h2>Newsletter</h2>
+              <p>
+                Stay up to date with news and promotions by singing up for our
+                newsletter
+              </p>
+              <div class="form">
+                <div>
+                  <input id="email" placeholder="Your email" type="text" />
+                  <button><i class="fa-regular fa-envelope"></i> Send</button>
+                </div>
+                <input type="checkbox" name="" id="" />
+                I have read and agree to the <a href="#">Privacy Policy.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+              <p>
+                Copyright <i class="fa-regular fa-copyright"></i> 2014, Your
+                Store, All Rights Reserved
+              </p>
+              <div class="right">
+                <div class="img">
+                  <img
+                    src="https://github.com/w3villa-abhishek-sharma/mini-project/blob/master/Assets/images/images-removebg-preview.png?raw=true"
+                    alt=""
+                  />
+                </div>
+                <span
+                  ><a href="#header"
+                    ><i class="fa-sharp fa-solid fa-arrow-up"></i></a
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function pActive(element) {
+        for (const child of element.parentNode.children) {
+          child.classList.remove("p-active");
+        }
+        element.classList.add("p-active");
+        search(this);
+      }
+
+      function btn1click() {
+        let value = document
+          .getElementsByClassName("p-active")[0]
+          .getAttribute("value");
+        if (value > 1) {
+          let elem = document.getElementsByClassName("p-active")[0];
+          elem.classList.remove("p-active");
+          elem.previousElementSibling.classList.add("p-active");
+        }
+        search(this);
+      }
+
+      function btn2click() {
+        let value = document
+          .getElementsByClassName("p-active")[0]
+          .getAttribute("value");
+        if (value < 5) {
+          let elem = document.getElementsByClassName("p-active")[0];
+          elem.classList.remove("p-active");
+          elem.nextElementSibling.classList.add("p-active");
+        }
+        search(this);
+      }
+    </script>
+
+    <script src="./assets/javascript/script.js"></script>
+    <script src="./assets/javascript/search.js"></script>
+    <script src="./assets/javascript/login.js"></script>
+    <script src="./assets/javascript/cart.js"></script>
+    <script src="./assets/javascript/wishlist.js"></script>
+    <!-- JQuery JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
+    <!-- Owl Script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Custom OWl Jquery -->
+    <script>
+      // This Code for main carousel
+      $(".owl-carousel.main-screen").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+
+      // This Code for shop-by-brand card
+      $(".shop-by-brand .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 3,
+          },
+          600: {
+            items: 6,
+          },
+          1000: {
+            items: 9,
+          },
+        },
+      });
+
+      // This Code for from-our-blog cards
+      $(".from-our-blog-cards .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+
+      // This Code for category 2 cards
+      $(".right-card-container .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+
+      // This Code for category cards
+      $(".owl-carousel.category-cards-inner").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+          1500: {
+            items: 4,
+          },
+        },
+      });
+
+      // This Code for people saying cards
+      $(".people-saying-cards .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+
+      // Jquery for slider
+      var $range = $(".js-range-slider"),
+        $from = $(".from"),
+        $to = $(".to"),
+        range,
+        min = $range.data("min"),
+        max = $range.data("max"),
+        from,
+        to;
+      var updateValues = function () {
+        $from.prop("value", from);
+        $to.prop("value", to);
+      };
+      $range.ionRangeSlider({
+        onChange: function (data) {
+          from = data.from;
+          to = data.to;
+          updateValues();
+        },
+      });
+      range = $range.data("ionRangeSlider");
+      var updateRange = function () {
+        range.update({
+          from: from,
+          to: to,
+        });
+      };
+      $from.on("input", function () {
+        from = +$(this).prop("value");
+        if (from < min) {
+          from = min;
+        }
+        if (from > to) {
+          from = to;
+        }
+        updateValues();
+        updateRange();
+      });
+      $to.on("input", function () {
+        to = +$(this).prop("value");
+        if (to > max) {
+          to = max;
+        }
+        if (to < from) {
+          to = from;
+        }
+        updateValues();
+        updateRange();
+      });
+    </script>
+  </body>
+</html>
