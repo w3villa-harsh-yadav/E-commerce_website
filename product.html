@@ -294,19 +294,21 @@
                 <div class="custom">Custom Tabs</div>
               </div>
               <div class="product-desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-                ducimus iste hic, nobis laboriosam ad eligendi beatae rem dolore
-                minima, recusandae laborum et delectus architecto,
-                <span id="blur">
-                  ratione saepe quasi accusantium modi atque quis vero?
-                  Explicabo delectus optio at voluptas
-                </span>
-                <span id="blur1">
-                  ratione saepe quasi accusantium modi atque quis vero?
-                  Explicabo delectus optio at voluptas
-                </span>
+                <div id="product-desc">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+                    ducimus iste hic, nobis laboriosam ad eligendi beatae rem dolore
+                    minima, recusandae laborum et delectus architecto,
+                    <span id="blur">
+                      ratione saepe quasi accusantium modi atque quis vero?
+                      Explicabo delectus optio at voluptas
+                    </span>
+                    <span id="blur1">
+                      ratione saepe quasi accusantium modi atque quis vero?
+                      Explicabo delectus optio at voluptas
+                    </span>
+                </div>
                 <span class="button">
-                  <button>
+                  <button class="showmore" id="showbtn" onclick="showmore(this)">
                     <i class="fa-solid fa-caret-down"></i> Show more
                   </button>
                 </span>
@@ -757,7 +759,7 @@
         </div>
       </div>
     </footer>
-
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, tempora cumque? Ratione similique saepe nisi eligendi! Modi accusamus obcaecati ratione ut assumenda natus dolores cum. Nobis minima fugiat atque omnis exercitationem esse animi illum, corporis praesentium quis itaque inventore cum cumque excepturi, dolores iste? Ullam distinctio similique in tempora. Quo nesciunt ut distinctio odit reiciendis architecto animi saepe vel nam, repellat tempore tempora consequatur unde suscipit, doloribus nulla incidunt ad?</p>
     <script>
       function pActive(element) {
         for (const child of element.parentNode.children) {
@@ -789,6 +791,40 @@
           elem.nextElementSibling.classList.add("p-active");
         }
         search(this);
+      }
+
+      function showmore(elem){
+        if(elem.classList.contains('showmore')){
+          elem.classList.remove('showmore')
+          text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, tempora cumque? Ratione similique saepe nisi eligendi! Modi accusamus obcaecati ratione ut assumenda natus dolores cum. Nobis minima fugiat atque omnis exercitationem esse animi illum, corporis praesentium quis itaque inventore cum cumque excepturi, dolores iste? Ullam distinctio similique in tempora. Quo nesciunt ut distinctio odit reiciendis architecto animi saepe vel nam, repellat tempore tempora consequatur unde suscipit, doloribus nulla incidunt ad?'
+          document.getElementById("product-desc").innerText = text
+          elem.innerHTML = '<i class="fa-solid fa-caret-up"></i> Show less'
+          elem.classList.add('showless');
+          document.getElementById('showbtn').style.top = '85%'
+          document.getElementById('showbtn').style.marginTop = '10px'
+          document.getElementById("product-desc").style.paddingBottom = "40px"
+        }
+        else{
+          elem.classList.remove('showless')
+          text = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+                    ducimus iste hic, nobis laboriosam ad eligendi beatae rem dolore
+                    minima, recusandae laborum et delectus architecto,
+                    <span id="blur">
+                      ratione saepe quasi accusantium modi atque quis vero?
+                      Explicabo delectus optio at voluptas
+                    </span>
+                    <span id="blur1">
+                      ratione saepe quasi accusantium modi atque quis vero?
+                      Explicabo delectus optio at voluptas
+                    </span>`
+          document.getElementById("product-desc").innerHTML = text
+          elem.innerHTML = '<i class="fa-solid fa-caret-down"></i> Show more'
+          elem.classList.add('showmore')
+          document.getElementById('showbtn').style.top = '70%'
+          // document.getElementById('showbtn').style.marginTop = '0px'
+          // document.getElementById("product-desc").style.paddingBottom = "0px"
+          
+        } 
       }
     </script>
 

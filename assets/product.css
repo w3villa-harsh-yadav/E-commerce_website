@@ -104,7 +104,7 @@
   border: none;
   padding: 5px;
   position: absolute;
-  top: 80px;
+  top: 70%;
   left: 50%;
 }
 .hero-section .hero-content .content-2 .ratings {
@@ -509,9 +509,9 @@
 }
 
 @media screen and (max-width: 400px){
-    /* .hero-section .hero-content .content-2 .sub-heading .rev{
+    .hero-section .hero-content .content-2 .sub-heading .rev{
         display: none;
-    } */
+    }
     .hero-section .hero-content .content-2 .price-stock .price-section {
         padding-right: 40px;
         border-right: unset;
@@ -558,6 +558,11 @@
         padding:  10px 0px;
     }
 
+}
+@media screen and (max-width:280px){
+  .hero-section .hero-content .content-2 .sub-heading .specs{
+    display: none;
+  }
 }
 
 /* ++++++ Related products section ++++++ */
