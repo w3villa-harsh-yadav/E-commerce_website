@@ -801,7 +801,6 @@
           elem.innerHTML = '<i class="fa-solid fa-caret-up"></i> Show less'
           elem.classList.add('showless');
           document.getElementById('showbtn').style.top = '85%'
-          document.getElementById('showbtn').style.marginTop = '10px'
           document.getElementById("product-desc").style.paddingBottom = "40px"
         }
         else{
@@ -818,11 +817,10 @@
                       Explicabo delectus optio at voluptas
                     </span>`
           document.getElementById("product-desc").innerHTML = text
+          document.getElementById("product-desc").style.paddingBottom = "0px"
           elem.innerHTML = '<i class="fa-solid fa-caret-down"></i> Show more'
+          document.getElementById('showbtn').style.top = '50%'
           elem.classList.add('showmore')
-          document.getElementById('showbtn').style.top = '70%'
-          // document.getElementById('showbtn').style.marginTop = '0px'
-          // document.getElementById("product-desc").style.paddingBottom = "0px"
           
         } 
       }
