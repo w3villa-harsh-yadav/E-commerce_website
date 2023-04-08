@@ -46,28 +46,28 @@ const categories_data = async () => {
     if (element.type == "categories") {
       html += `
         <div class="item i-1">
-        <div class="image">
-        <img
-            src="${element.item_image}"
-            alt=""
-        />
-        </div>
-        <div class="row-1">
-        <div class="item-name">${element.item_name}</div>
-        <div class="item-price">
-            <i class="fa-light fa-indian-rupee-sign"></i>
-            ${element.item_price}
-        </div>
-        </div>
-        <div class="row-2">
-        <span class="input-btn">
-            <button onclick="cart(this)" id="${element.id}" >Add to Cart</button>
-        </span>
-        <span class="icons">
-            <i class="fa-light fa-heart heart" onclick="wishlist(this)" id="${element.id}"></i>
-            <i class="fa-thin fa-arrow-right-arrow-left arrow"></i>
-        </span>
-        </div>
+          <div class="image">
+          <img
+              src="${element.item_image}"
+              alt=""
+          />
+          </div>
+          <div class="row-1">
+          <div class="item-name">${element.item_name}</div>
+          <div class="item-price">
+              <i class="fa-light fa-indian-rupee-sign"></i>
+              ${element.item_price}
+          </div>
+          </div>
+          <div class="row-2">
+          <span class="input-btn">
+              <button onclick="cart(this)" id="${element.id}" >Add to Cart</button>
+          </span>
+          <span class="icons">
+              <i class="fa-light fa-heart heart" onclick="wishlist(this)" id="${element.id}"></i>
+              <i class="fa-thin fa-arrow-right-arrow-left arrow"></i>
+          </span>
+          </div>
     </div>
   `;
     }
