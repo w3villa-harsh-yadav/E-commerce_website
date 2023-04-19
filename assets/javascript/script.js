@@ -84,7 +84,8 @@ const products_data = async () => {
       html += `
         <div class="${element.item_class} item">
         <div class="item-image">
-          <img src="${element.item_image}" alt="#">
+        <img src="${element.item_image}" alt="#">
+        <div class="icon"><i class="fa-solid fa-magnifying-glass-plus" style="color: #fff;"></i></div>
         </div>
         <div class="item-details ptbs">
           <div class="item-name">${element.item_detail}</div>
@@ -111,16 +112,16 @@ const products_data = async () => {
         </div>
         <div class="item-footer ptbs">
           <div class="buy-now">
-            <a href="#">
+            <div href="#">
               <i class="fa-regular fa-cart-shopping"></i>
               Buy now
-            </a>
+            </div>
           </div>
           <div class="question">
-            <a href="#">
+            <div onclick="triggerModal()">
               <i class="fa-light fa-circle-question"></i>
               Question
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -144,6 +145,32 @@ const buy_data = async () => {
   });
   document.getElementById("image-block").innerHTML = html;
 };
+
+
+var navbar = document.getElementById('blue-section')
+var offset = navbar.offsetTop
+
+const sticky_nav =() =>{
+  if(window.pageYOffset >= offset){
+    navbar.classList.add("sticky");
+    navbar.style.opacity="1";
+    document.getElementById('sale-heading').style.display="none"
+    document.getElementById('new-heading').style.display="none"
+    navbar.style.transform = "all .5s ease-in-out";
+  }else{
+    navbar.classList.remove("sticky");
+    document.getElementById('sale-heading').style.display="flex"
+    document.getElementById('new-heading').style.display="flex"
+  }
+
+}
+
+window.onscroll = function(){
+  sticky_nav()
+}
+
+
+
 
 blog_data();
 categories_data();

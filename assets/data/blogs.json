@@ -1,9 +1,9 @@
 {
     "blog": [
-        
+
         {
             "id":1,
-            "img": "https://images.unsplash.com/photo-1673386999350-a7031ce4edd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            "img": "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
             "type": "admin",
             "msg": "38",
             "views": "19340",
@@ -14,7 +14,7 @@
 
         {
             "id":2,
-            "img": "https://images.unsplash.com/photo-1673386999350-a7031ce4edd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            "img": "https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aW1hZ2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
             "type": "admin",
             "msg": "38",
             "views": "19340",
@@ -25,7 +25,7 @@
 
         {
             "id":3,
-            "img": "https://images.unsplash.com/photo-1673386999350-a7031ce4edd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            "img": "https://images.unsplash.com/photo-1502613374390-8da7aa532177?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW1hZ2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
             "type": "admin",
             "msg": "38",
             "views": "19340",
@@ -36,14 +36,14 @@
 
         {
             "id":4,
-            "img": "https://images.unsplash.com/photo-1673386999350-a7031ce4edd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            "img": "https://images.unsplash.com/photo-1586810724476-c294fb7ac01b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
             "type": "admin",
             "msg": "38",
             "views": "19340",
             "card-heading": "Journal Blog is here",
             "text": "Lorem ipsum sit amet consecuter adipisicing elit. Dolore maxime error cupiditate blanditiis voluptates ad, amet consequuntur voluptates ad, amet consequuntur cum quam animi assumenda perferedendis incidunt quo! In, officio ad praesentium mollitia placeat at delectus ullam eligendi.",
             "readmore": "Read More"
-        }        
+        }
 
     ]
 
