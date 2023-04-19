@@ -155,10 +155,10 @@ const showgrid = async () => {
   }
 };
 
-// Url change 
+// Url change
 const url = async()=>{
   const search = document.getElementById("search-icon").value;
-  window.location.href = `http://127.0.0.1:5501/search.html?search=${search}`
+  window.location.href = `./search.html?search=${search}`
 }
 
 
