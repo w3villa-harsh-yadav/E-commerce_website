@@ -64,6 +64,7 @@
     <!-- <link rel="stylesheet" href="./assets/list.css"> -->
   </head>
   <body onload="search()">
+    <!-- Header-classes -->
     <div id="header" class="header">
       <div class="container">
         <!-- 1st Nav-bar -->
@@ -81,11 +82,29 @@
               <li>
                 <a href="#"><i class="fa-light fa-envelope"></i> Contact</a>
               </li>
-              <li>
+              <li class="dropdown">
                 <a href="#"
                   ><i class="fa-light fa-circle-question"></i> FAQ
                   <i class="fa-solid fa-caret-down"></i
                 ></a>
+
+                <div class="dropdown-content">
+                  <a href="#"
+                    ><i
+                      class="fa-regular fa-arrow-right"
+                      style="color: #ffffff"
+                    ></i>
+                    Create</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-gem" style="color: #ffffff"></i>
+                    Unlimited</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-violin" style="color: #ffffff"></i>
+                    Menus</a
+                  >
+                </div>
               </li>
             </ul>
             <ul class="list-sm">
@@ -99,24 +118,59 @@
           </div>
           <div class="l2">
             <ul class="list">
-              <li>
+              <li class="dropdown">
                 <a href="#">🇮🇳 Hindi <i class="fa-solid fa-caret-down"></i></a>
+
+                <div class="dropdown-content">
+                  <a href="#">🇬🇧 English</a>
+                  <a href="#">🇷🇺 Russian</a>
+                </div>
               </li>
-              <li>
+              <li class="dropdown">
                 <a href="#"
                   ><i class="fa-light fa-indian-rupee-sign"></i> Indian Rupees
                   <i class="fa-solid fa-caret-down"></i
                 ></a>
+
+                <div class="dropdown-content">
+                  <a href="#"
+                    ><i
+                      class="fa-solid fa-euro-sign"
+                      style="color: #ffffff"
+                    ></i>
+                    Euro</a
+                  >
+                  <a href="#"
+                    ><i
+                      class="fa-solid fa-dollar-sign"
+                      style="color: #ffffff"
+                    ></i>
+                    US Dollor</a
+                  >
+                  <a href="#"
+                    ><i
+                      class="fa-solid fa-sterling-sign"
+                      style="color: #ffffff"
+                    ></i>
+                    Pound</a
+                  >
+                </div>
               </li>
             </ul>
           </div>
           <div class="l3">
             <ul class="list">
-              <li>
+              <li class="dropdown">
                 <a href="#"
                   ><i class="fa-solid fa-bars"></i> More Menus
                   <i class="fa-solid fa-caret-down"></i
                 ></a>
+                <div class="dropdown-content" style="width: 150px">
+                  <a href="#">The Best Menu</a>
+                  <a href="#">Options You Will</a>
+                  <a href="#">Ever find</a>
+                  <a href="#">In a Theme</a>
+                </div>
               </li>
               <li>
                 <a href="#"><i class="fa-duotone fa-truck"></i> Delivery</a>
@@ -129,9 +183,25 @@
           <div class="heading">
             <h1>Journal</h1>
           </div>
-          <div class="search">
+          <div class="search dropdown">
             <div class="button">
               <p>All &nbsp<i class="fa-solid fa-caret-down"></i></p>
+              <div class="drp">
+                <div class="dropdown-content custom-button">
+                  <a href="#">All</a>
+                  <a href="#">Fashion</a>
+                  <a href="#">Bags</a>
+                  <a href="#">Health & Beauty</a>
+                  <a href="#">Footwear</a>
+                  <a href="#">Home decor</a>
+                  <a href="#">Electronics</a>
+                  <a href="#">Appliances</a>
+                  <a href="#">Baby & Kids</a>
+                  <a href="#">Flowers</a>
+                  <a href="#">Food</a>
+                  <a href="#">Sports</a>
+                </div>
+              </div>
             </div>
             <div class="input">
               <input
@@ -192,22 +262,469 @@
     </div>
 
     <!-- All Departments Section -->
-    <div class="blue-section">
+    <div class="blue-section" id="blue-section">
       <div class="container">
         <div class="all-dept">
-          <div class="dept">
+          <div class="dept dropdown">
             <p><i class="fa-solid fa-align-justify"></i> ALL DEPARTMENTS</p>
-            <div class="sale-heading">Sale</div>
+            <div class="sale-heading" id="sale-heading">Sale</div>
+            <div class="dropdown-content">
+              <div class="options">
+                <span>
+                  <i class="fa-solid fa-bars-sort" style="color: black"></i>
+                  Shop by Category
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+                <div class="inner-dropdown-content">
+                  <div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551024739-78e9d60c45ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="options">
+                <span>
+                  <i class="fa-brands fa-apple" style="color: black"></i>
+                  Shop by Brand
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i
+                ></span>
+                <div class="inner-dropdown-content">
+                  <div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551024739-78e9d60c45ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="options">
+                <span>
+                  <i class="fa-brands fa-apple" style="color: black"></i>Special
+                  Deals
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+                <div class="inner-dropdown-content">
+                  <div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551024739-78e9d60c45ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="options">
+                <span>
+                  <i class="fa-solid fa-badge-percent" style="color: black"></i
+                  >Bestsellers
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div class="options">
+                <span>
+                  <i class="fa-solid fa-circle-star" style="color: black"></i
+                  >Custom links
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div class="options">
+                <span>
+                  <i class="fa-solid fa-store" style="color: black"></i>See All
+                  Products
+                </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+                <div class="inner-dropdown-content">
+                  <div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="inner-dropdown-list">
+                        <h1>Fashion</h1>
+                        <a href="#">Accesories</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>Electronics</h1>
+                        <a href="#">Desktops</a>
+                        <a href="#">Laptops & Notebooks</a>
+                        <a href="#">Components</a>
+                        <a href="#">Phones & PDAs</a>
+                        <a href="#">See all Products</a>
+                      </div>
+                      <div class="inner-dropdown-list">
+                        <h1>BAGS</h1>
+                        <a href="#">Backpacks</a>
+                        <a href="#">Clutches</a>
+                        <a href="#">Formal</a>
+                        <a href="#"></a>
+                        <a href="#">See all Products</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551024739-78e9d60c45ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="multi">
+          <div class="multi dropdown">
             <p>MULTILEVEL</p>
+            <div class="dropdown-content">
+              <div href="#" class="options">
+                <span> Accesories </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> Pants </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span>Dresses </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+
+              <div href="#" class="options">
+                <span> T-shirts </span>
+              </div>
+
+              <div href="#" class="options">
+                <span> Tops </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="mega">
+          <div class="mega dropdown">
             <p>MEGA MENU</p>
-            <div class="new-heading">New</div>
+            <div class="new-heading" id="new-heading">New</div>
+            <div class="dropdown-content">
+              <div href="#" class="options">
+                <span> Accesories </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> Pants </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> Dresses </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> T-shirts </span>
+              </div>
+              <div href="#" class="options">
+                <span> Tops </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="width">
+          <div class="width dropdown">
             <p>FULL WIDTH</p>
+            <div class="dropdown-content">
+              <div href="#" class="options">
+                <span> Accesories </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> Pants </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> Dresses </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+              <div href="#" class="options">
+                <span> T-shirts </span>
+              </div>
+              <div href="#" class="options">
+                <span> Tops </span>
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style="color: #000000"
+                  ></i>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="numb">
@@ -672,7 +1189,7 @@
         elem.classList.remove("active");
         elem.innerHTML = `<div class="filter-content">
             <span>${text}</span>
-            <i class="fa-solid fa-plus" 
+            <i class="fa-solid fa-plus"
             onclick="show(this)"></i>
         </div>
         `;
