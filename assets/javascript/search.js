@@ -26,7 +26,7 @@ const search = async () => {
     console.log(arr[i]);
     if (i < value * 4 && i >= a) {
       html += `
-            <div class="${arr[i].item_class} item">
+            <div class="${arr[i].item_class} item" onclick="showproduct(${arr[i].id})">
                     <div class="item-image">
                       <img
                         src="${arr[i].item_image}"
@@ -160,7 +160,6 @@ const url = async()=>{
   const search = document.getElementById("search-icon").value;
   window.location.href = `./search.html?search=${search}`
 }
-
 
 // Search page loading funtion
 const load = async()=>{

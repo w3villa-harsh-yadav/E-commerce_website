@@ -297,7 +297,9 @@ a {
 .header .container .nav-1 .list .dropdown:hover .dropdown-content {
   display: block;
 }
-/* +++ nav-1 media queries+++ */
+
+/* +++++++ nav-1 media queries +++++++ */
+
 @media screen and (max-width: 1400px) {
   .header .container .nav-1 .l1 .list {
     display: none;
@@ -334,6 +336,7 @@ a {
 }
 .header .container .nav-2 .heading {
   font-size: 30px;
+  cursor: pointer;
 }
 .header .container .nav-2 .search .input {
   display: flex;
