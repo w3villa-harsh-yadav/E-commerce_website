@@ -1,7 +1,7 @@
 /* ++++ Variables +++++ */
 :root {
   --text-color: black;
-  --background-color: rgba(12, 8, 255, 0.733);
+  --background-color: rgba(12, 8, 255);
   --secondry-text-color: rgb(95, 95, 95);
   --primary-bg-color: blue;
   --secondry-bg-color: #eee;
@@ -97,7 +97,7 @@
   opacity: 0.1;
 }
 .hero-section .hero-content .content-2 .product-desc .button button {
-  background-color: #0c08ffbb;
+  background-color: var(--background-color);
   border-radius: 5px;
   color: white;
   outline: unset;
@@ -112,7 +112,7 @@
   border-bottom: 1px solid rgb(209, 209, 209);
 }
 .hero-section .hero-content .content-2 .ratings .review a {
-  color: #0c08ffbb;
+  color: var(--background-color);
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -237,7 +237,7 @@
   .file-upload
   .fileinput
   button {
-  background-color: #0c08ffbb;
+  background-color: var(--background-color);
   color: white;
   width: 100%;
   padding: 10px 0px;
@@ -262,7 +262,7 @@
   .calender
   .date-input
   button {
-  background-color: #0c08ffbb;
+  background-color: var(--background-color);
   color: white;
   padding: 7px 10px;
   outline: unset;
@@ -316,7 +316,7 @@
   .addtocart
   .addtocartbtn
   button {
-  background-color: #0c08ffbb;
+  background-color: var(--background-color);
   color: white;
   outline: unset;
   border: none;
@@ -460,7 +460,7 @@
         padding-right: 15px;
     }
     .hero-section .hero-content .content-1 .side-image .last-2{
-        display: none;    
+        display: none;
     }
     .hero-section .hero-content .content-1 .side-image .drpdn{
         display: block;
@@ -489,7 +489,7 @@
         display: none;
     }
     .hero-section .hero-content .content-1 .side-image .middle-2{
-        display: none;    
+        display: none;
     }
     .hero-section .hero-content .content-1 .main-image {
         width: 100%;
@@ -675,4 +675,3 @@
        object-position: center;
     }
 }
-  

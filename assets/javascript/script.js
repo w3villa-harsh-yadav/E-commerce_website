@@ -82,7 +82,7 @@ const products_data = async () => {
   data.items.forEach((element) => {
     if (element.type == "products") {
       html += `
-        <div class="${element.item_class} item">
+        <div class="${element.item_class} item" onclick="showproduct(${element.id})">
         <div class="item-image">
         <img src="${element.item_image}" alt="#">
         <div class="icon"><i class="fa-solid fa-magnifying-glass-plus" style="color: #fff;"></i></div>
@@ -169,7 +169,9 @@ window.onscroll = function(){
   sticky_nav()
 }
 
-
+function tohome(){
+  window.location.assign("./index.html")
+}
 
 
 blog_data();
