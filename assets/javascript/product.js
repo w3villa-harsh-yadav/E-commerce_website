@@ -23,6 +23,12 @@ const fetchproduct = async() =>{
             for(let i=0; i<imgData.length;i++){
                 imgData[i].innerHTML = `<img src="${element.item_image}" alt="#">`
             }
+            document.getElementById("product-header").innerHTML =
+            `<i class="fa-thin fa-house"></i>
+             <i class="fa-thin fa-arrow-right"></i>
+             Search
+             <i class="fa-thin fa-arrow-right"></i>
+             ${element.item_name}`
         }
     });
 }
